@@ -1,0 +1,320 @@
+@import url('resete.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray-primary: #AAAAAA;
+    --gray-secundary: #f0f0f0;
+    --gray-tertiary: #f5f5f5;
+    --orang: #fa0;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+link[rel="shortcut icon"] {
+    border-radius: 50%;
+}
+
+.botao:hover {
+    color: var(--white);
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background-color: var(--black);
+    height: 35px;
+
+    justify-content: space-between;
+
+}
+
+header p {
+    color: var(--gray-primary);
+    font-size: 12px;
+}
+
+header>div {
+    display: flex;
+    gap: 30px;
+    margin: 0 40px;
+}
+
+.icon-oculos {
+    margin-right: 10px;
+}
+
+p {
+    color: var(--black);
+}
+
+/* section segunda barra */
+.segunda-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    gap: 40px;
+    height: 85px;
+}
+
+.logo p {
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--gray-secundary);
+    border: 1px solid var(--gray-secundary);
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    height: 35px;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: var(--gray-secundary);
+}
+
+.search-bar button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-image: url(../img/icons/lupa.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 35px;
+    height: 35px;
+}
+
+.login {
+    font-size: 12px;
+    width: 110px;
+    font-weight: bold;
+}
+
+.login p {
+    color: var(--black);
+}
+
+.login img {
+    fill: var(--gray-secundary);
+    stroke: var(--black);
+}
+
+.search-place {
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.like,
+.bag {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+
+/* lista de opceoes */
+.lista-opcoes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.lista-opcoes ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista-opcoes ul li {
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.lista-opcoes ul li a {
+    text-decoration: none;
+    color: var(--black);
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.lista-opcoes ul li a:hover {
+    background-color: var(--gray-tertiary);
+}
+
+
+/* lista de oculos */
+.resultado-busca {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo p {
+    font-size: 20px;
+    font-family: Druk-Bold, sans-serif;
+}
+
+.itens {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.item {
+    background: #fff;
+    border: 1px solid #eee;
+    position: relative;
+    margin-bottom: 10px;
+    max-width: 250px;
+    display: grid;
+}
+
+.item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 2px solid var(--gray-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icone-like {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+    /* Adiciona uma transição suave */
+}
+
+.icone-like.clicked path {
+    stroke: red;
+    /* Muda a cor do contorno para vermelho */
+}
+
+
+.imagem-produto {
+    max-width: 240px;
+    height: auto;
+}
+
+.descricao-produto {
+    text-transform: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--black);
+    margin: 5px auto;
+}
+
+.precos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.preco-antigo {
+    font-size: 14px;
+    line-height: 16px;
+    color: #9c9c9c;
+    font-weight: 400;
+}
+
+.preco-novo {
+    padding: 0 5px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.parcelado {
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+/* Estilo para o rodapé */
+.rodape {
+    margin-top: 30px;
+    background-color: var(--black);
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    gap: 30px;
+}
+
+.link-topo {
+    color: var(--orang);
+    font-size: 12px;
+    text-decoration: underline;
+    margin-right: 20px;
+}
+
+.logo-footer>p {
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--white);
+}
+
+/* .redes-sociais {
+    margin-top: 10px;
+} */
+
+.redes-sociais a {
+    margin-right: 10px;
+}
+
+.redes-sociais img {
+    width: 30px;
+    height: 30px;
+}

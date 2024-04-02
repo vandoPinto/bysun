@@ -1,0 +1,65 @@
+/* Reset CSS */
+
+/* Box-sizing reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Remove margens e preenchimentos padrão */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+figure,
+blockquote,
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove estilos de lista padrão */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remova estilos de link padrão */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remova estilos de botão padrão */
+button {
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+/* Defina fonte de tamanho padrão */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+/* Outros resets podem ser adicionados conforme necessário */
