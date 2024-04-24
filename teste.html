@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>SVG Event Example</title>
+    <style>
+        .svg-icon {
+            fill: none;
+            /* Cor padrão */
+            transition: fill 0.3s;
+            /* Transição suave */
+            cursor: pointer;
+            /* Cursor de mão para indicar clicabilidade */
+        }
+
+        .svg-icon:hover {
+            fill: #E91E63;
+            /* Cor ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="utilities__icons ico--wishlist icone-like svg-icon" width="21"
+        height="21" viewBox="0 0 21 21" fill="none" id="my-svg">
+        <path
+            d="M15.057 0.876321C12.5247 0.830199 11.1787 2.83649 10.5171 4.10483C9.19393 1.59121 7.77948 0.761017 5.58936 0.876321C3.03423 0.991625 0.775676 3.13628 0.866931 6.38785C1.00381 12.2222 10.5399 20.5011 10.5399 20.5011C10.5399 20.5011 14.327 16.9497 16.8137 13.7212C17.8631 12.3606 20.2129 8.97066 20.2129 6.24949C20.2129 3.52831 18.2738 0.922442 15.057 0.876321Z"
+            stroke="#000" stroke-width="0.75" stroke-miterlimit="10" />
+    </svg>
+    <div class="seu-container" style="width: 100%;  height: 100%;"></div>
+    <script>
+        // Adiciona um ouvinte de evento de clique ao SVG
+        // document.getElementsByClassName('svg-icon').addEventListener('click', function () {
+        //     // Muda o valor de fill="none" para fill="#E91E63"
+        //     this.setAttribute('fill', '#E91E63');
+        // });
+
+
+
+        // Cria o elemento SVG
+        var svgElement = $('<svg xmlns="http://www.w3.org/2000/svg" class="utilities__icons ico--wishlist icone-like" width="21" height="21" viewBox="0 0 21 21" fill="none"><path d="M15.057 0.876321C12.5247 0.830199 11.1787 2.83649 10.5171 4.10483C9.19393 1.59121 7.77948 0.761017 5.58936 0.876321C3.03423 0.991625 0.775676 3.13628 0.866931 6.38785C1.00381 12.2222 10.5399 20.5011 10.5399 20.5011C10.5399 20.5011 14.327 16.9497 16.8137 13.7212C17.8631 12.3606 20.2129 8.97066 20.2129 6.24949C20.2129 3.52831 18.2738 0.922442 15.057 0.876321Z" stroke="#000" stroke-width="0.75" stroke-miterlimit="10"/></svg>');
+
+        // Converte o SVG para uma string base64
+        var svgString = "data:image/svg+xml;base64," + btoa(svgElement.prop('outerHTML'));
+
+        // Cria a imagem com a classe "icone-like" e atributos necessários
+        var imgLike = $("<img>").addClass("icone-like")
+            .attr("src", svgString)
+            .attr("alt", "Like produto");
+
+        // Adiciona a imagem ao DOM
+        console.log($(".seu-container"));
+        $(".seu-container").append(imgLike);
+
+        // Adiciona um ouvinte de evento de clique à imagem
+        imgLike.click(function () {
+            // Muda a cor do fill do SVG quando a imagem é clicada
+            console.log('trocando');
+            imgLike.css('fill', '#E91E63');
+        });
+    </script>
+</body>
+
+</html>

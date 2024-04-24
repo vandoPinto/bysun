@@ -248,9 +248,14 @@ p {
     /* Adiciona uma transição suave */
 }
 
-.icone-like.clicked path {
-    stroke: red;
-    /* Muda a cor do contorno para vermelho */
+.icone-like path {
+    fill: #E91E63;
+    /* Define o fill para #E91E63 */
+}
+
+.svg-icon:hover {
+    fill: #E91E63;
+    /* Cor ao passar o mouse */
 }
 
 
