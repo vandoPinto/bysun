@@ -1,0 +1,340 @@
+{
+    "GLAMUROSAS": [
+        {
+            "imgs": [
+                "./img/imagens-oculos/front.png",
+                "./img/imagens-oculos/front.png"
+            ],
+            "descricao": "Óculos de Sol Feminino Redondo Polarizado Metal Dourado",
+            "precoAntigo": "399,98",
+            "precoNovo": "199,99",
+            "parcelado": [
+                "4",
+                "49,90"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem1.png",
+                "./img/imagens-oculos/imagem1.png"
+            ],
+            "descricao": "Outro exemplo de óculos glamurosos",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "parcelado": [
+                "3",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem2.jpeg",
+                "./img/imagens-oculos/imagem2.jpeg"
+            ],
+            "descricao": "Outro exemplo de óculos glamurosos",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "parcelado": [
+                "3",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem3.jpeg",
+                "./img/imagens-oculos/imagem3.jpeg"
+            ],
+            "descricao": "Mais um modelo glamuroso para sua coleção",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "parcelado": [
+                "6",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem3.jpeg",
+                "./img/imagens-oculos/imagem3.jpeg"
+            ],
+            "descricao": "Mais um modelo glamuroso para sua coleção",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "parcelado": [
+                "6",
+                "49,99"
+            ]
+        }
+    ],
+    "GLAMUROSAS II": [
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem2.jpeg",
+                "./img/imagens-oculos/imagem2.jpeg"
+            ],
+            "descricao": "Outro exemplo de óculos glamurosos",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "parcelado": [
+                "3",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/front.png",
+                "./img/imagens-oculos/front.png"
+            ],
+            "descricao": "Óculos de Sol Feminino Redondo Polarizado Metal Dourado",
+            "precoAntigo": "399,98",
+            "precoNovo": "199,99",
+            "parcelado": [
+                "4",
+                "49,90"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem3.jpeg",
+                "./img/imagens-oculos/imagem3.jpeg"
+            ],
+            "descricao": "Mais um modelo glamuroso para sua coleção",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "parcelado": [
+                "6",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem1.png",
+                "./img/imagens-oculos/imagem1.png"
+            ],
+            "descricao": "Outro exemplo de óculos glamurosos",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "parcelado": [
+                "3",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem3.jpeg",
+                "./img/imagens-oculos/imagem3.jpeg"
+            ],
+            "descricao": "Mais um modelo glamuroso para sua coleção",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "parcelado": [
+                "6",
+                "49,99"
+            ]
+        }
+    ],
+    "MASCULINOS": [
+        {
+            "imgs": [
+                "./img/imagens-oculos/front.png",
+                "./img/imagens-oculos/front.png"
+            ],
+            "descricao": "Óculos de Sol Feminino Redondo Polarizado Metal Dourado",
+            "precoAntigo": "399,98",
+            "precoNovo": "199,99",
+            "parcelado": [
+                "4",
+                "49,90"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem1.png",
+                "./img/imagens-oculos/imagem1.png"
+            ],
+            "descricao": "Outro exemplo de óculos glamurosos",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "parcelado": [
+                "3",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem2.jpeg",
+                "./img/imagens-oculos/imagem2.jpeg"
+            ],
+            "descricao": "Outro exemplo de óculos glamurosos",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "parcelado": [
+                "3",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem3.jpeg",
+                "./img/imagens-oculos/imagem3.jpeg"
+            ],
+            "descricao": "Mais um modelo glamuroso para sua coleção",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "parcelado": [
+                "6",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem3.jpeg",
+                "./img/imagens-oculos/imagem3.jpeg"
+            ],
+            "descricao": "Mais um modelo glamuroso para sua coleção",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "parcelado": [
+                "6",
+                "49,99"
+            ]
+        }
+    ],
+    "INFANTIS": [
+        {
+            "imgs": [
+                "./img/imagens-oculos/front.png",
+                "./img/imagens-oculos/front.png"
+            ],
+            "descricao": "Óculos de Sol Feminino Redondo Polarizado Metal Dourado",
+            "precoAntigo": "399,98",
+            "precoNovo": "199,99",
+            "parcelado": [
+                "4",
+                "49,90"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem1.png",
+                "./img/imagens-oculos/imagem1.png"
+            ],
+            "descricao": "Outro exemplo de óculos glamurosos",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "parcelado": [
+                "3",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem2.jpeg",
+                "./img/imagens-oculos/imagem2.jpeg"
+            ],
+            "descricao": "Outro exemplo de óculos glamurosos",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "parcelado": [
+                "3",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem3.jpeg",
+                "./img/imagens-oculos/imagem3.jpeg"
+            ],
+            "descricao": "Mais um modelo glamuroso para sua coleção",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "parcelado": [
+                "6",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem3.jpeg",
+                "./img/imagens-oculos/imagem3.jpeg"
+            ],
+            "descricao": "Mais um modelo glamuroso para sua coleção",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "parcelado": [
+                "6",
+                "49,99"
+            ]
+        }
+    ],
+    "DICAS GOLDEN": [
+        {
+            "imgs": [
+                "./img/imagens-oculos/front.png",
+                "./img/imagens-oculos/front.png"
+            ],
+            "descricao": "Óculos de Sol Feminino Redondo Polarizado Metal Dourado",
+            "precoAntigo": "399,98",
+            "precoNovo": "199,99",
+            "parcelado": [
+                "4",
+                "49,90"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem1.png",
+                "./img/imagens-oculos/imagem1.png"
+            ],
+            "descricao": "Outro exemplo de óculos glamurosos",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "parcelado": [
+                "3",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem2.jpeg",
+                "./img/imagens-oculos/imagem2.jpeg"
+            ],
+            "descricao": "Outro exemplo de óculos glamurosos",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "parcelado": [
+                "3",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem3.jpeg",
+                "./img/imagens-oculos/imagem3.jpeg"
+            ],
+            "descricao": "Mais um modelo glamuroso para sua coleção",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "parcelado": [
+                "6",
+                "49,99"
+            ]
+        },
+        {
+            "imgs": [
+                "./img/imagens-oculos/imagem3.jpeg",
+                "./img/imagens-oculos/imagem3.jpeg"
+            ],
+            "descricao": "Mais um modelo glamuroso para sua coleção",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "parcelado": [
+                "6",
+                "49,99"
+            ]
+        }
+    ],
+    "INSPIRAÇÃO": [],
+    "ELOGIOS": [],
+    "NOSSA HISTÓRIA": []
+}

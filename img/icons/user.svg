@@ -1,0 +1,6 @@
+<svg class="utilities__icons ico--user" xmlns="http://www.w3.org/2000/svg" width="21" height="26" viewBox="0 0 21 26"
+    fill="none">
+    <circle cx="10.5" cy="7.5" r="7" stroke="#000"></circle>
+    <path d="M1 26C1 20.4787 5.25474 16 10.5 16C15.7453 16 20 20.4787 20 26" stroke="#000" stroke-miterlimit="10">
+    </path>
+</svg>

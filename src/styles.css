@@ -157,18 +157,34 @@ p {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-}
 
-.lista-opcoes ul li a {
     text-decoration: none;
     color: var(--black);
     padding: 12px 30px;
     transition: all 0.3s ease;
     font-size: 11px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.lista-opcoes ul li a:hover {
+/* .lista-opcoes ul li a {
+    text-decoration: none;
+    color: var(--black);
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+    font-size: 11px;
+    font-weight: bold;
+} */
+
+/* .lista-opcoes ul li a:hover {
+    background-color: var(--gray-tertiary);
+} */
+
+.lista-categorias :hover {
+    background-color: var(--gray-tertiary);
+}
+
+.selecionado {
     background-color: var(--gray-tertiary);
 }
 

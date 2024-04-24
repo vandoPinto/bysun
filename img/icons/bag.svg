@@ -1,0 +1,9 @@
+<svg class="utilities__icons ico--bag" xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 19 22"
+    fill="none">
+    <path
+        d="M15.0532 21.0545L3.66917 21.1237C1.84408 21.1237 0.406813 19.5786 0.543695 17.7338L1.36499 6.84905C1.45624 5.78826 2.32316 4.95807 3.39541 4.95807L15.441 5.00419C16.422 5.00419 17.2433 5.7652 17.3118 6.75681L18.1102 17.7107C18.2471 19.5094 16.8327 21.0545 15.0532 21.0776V21.0545Z"
+        stroke="#000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path>
+    <path
+        d="M6.17871 8.62473V4.03564C6.17871 2.4675 7.43347 1.19916 8.9848 1.19916C10.5361 1.19916 11.7909 2.4675 11.7909 4.03564V8.62473"
+        stroke="#000" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round"></path>
+</svg>

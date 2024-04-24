@@ -1,0 +1,9 @@
+<svg id="Grupo_4134" data-name="Grupo 4134" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Elipse_7" data-name="Elipse 7" fill="#fff" stroke="#eee" stroke-width="2">
+    <circle cx="20" cy="20" r="20" stroke="none"/>
+    <circle cx="20" cy="20" r="19" fill="none"/>
+  </g>
+  <g id="heart" transform="translate(12.699 -14.59)">
+    <path id="Caminho_9" data-name="Caminho 9" d="M13.466,29.7a4.056,4.056,0,0,0-5.736,0l-.4.4-.407-.407a4.052,4.052,0,0,0-5.736-.006,4.052,4.052,0,0,0,.006,5.736l5.832,5.832a.416.416,0,0,0,.59,0l5.845-5.823a4.064,4.064,0,0,0,.006-5.739Zm-.6,5.146L7.32,40.371,1.783,34.833A3.215,3.215,0,1,1,6.33,30.287l.7.7a.418.418,0,0,0,.593,0l.7-.7a3.217,3.217,0,0,1,4.55,4.55Z" transform="translate(0)" fill="#aaa" stroke="#aaa" stroke-width="0.8"/>
+  </g>
+</svg>
