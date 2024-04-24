@@ -131,6 +131,7 @@ p {
     width: 25px;
     height: 25px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 
@@ -248,16 +249,17 @@ p {
     /* Adiciona uma transição suave */
 }
 
-.icone-like path {
+/* .icone-like {
     fill: #E91E63;
-    /* Define o fill para #E91E63 */
 }
 
 .svg-icon:hover {
     fill: #E91E63;
-    /* Cor ao passar o mouse */
-}
+} */
 
+.marcado path {
+    fill: #E91E63;
+}
 
 .imagem-produto {
     max-width: 240px;

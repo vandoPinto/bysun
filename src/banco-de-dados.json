@@ -1,6 +1,7 @@
 {
     "GLAMUROSAS": [
         {
+            "id": 1,
             "imgs": [
                 "./img/imagens-oculos/imagem3.jpeg",
                 "./img/imagens-oculos/front.png"
@@ -14,6 +15,7 @@
             ]
         },
         {
+            "id": 2,
             "imgs": [
                 "./img/imagens-oculos/imagem1.png",
                 "./img/imagens-oculos/imagem1.png"
@@ -27,6 +29,7 @@
             ]
         },
         {
+            "id": 3,
             "imgs": [
                 "./img/imagens-oculos/imagem2.jpeg",
                 "./img/imagens-oculos/imagem2.jpeg"
@@ -40,6 +43,7 @@
             ]
         },
         {
+            "id": 4,
             "imgs": [
                 "./img/imagens-oculos/front.png",
                 "./img/imagens-oculos/imagem3.jpeg"
@@ -53,6 +57,7 @@
             ]
         },
         {
+            "id": 5,
             "imgs": [
                 "./img/imagens-oculos/imagem3.jpeg",
                 "./img/imagens-oculos/imagem3.jpeg"
@@ -68,6 +73,7 @@
     ],
     "GLAMUROSAS II": [
         {
+            "id": 6,
             "imgs": [
                 "./img/imagens-oculos/imagem2.jpeg",
                 "./img/imagens-oculos/imagem2.jpeg"
@@ -81,6 +87,7 @@
             ]
         },
         {
+            "id": 7,
             "imgs": [
                 "./img/imagens-oculos/front.png",
                 "./img/imagens-oculos/front.png"
@@ -94,6 +101,7 @@
             ]
         },
         {
+            "id": 8,
             "imgs": [
                 "./img/imagens-oculos/imagem3.jpeg",
                 "./img/imagens-oculos/imagem3.jpeg"
@@ -107,6 +115,7 @@
             ]
         },
         {
+            "id": 9,
             "imgs": [
                 "./img/imagens-oculos/imagem1.png",
                 "./img/imagens-oculos/imagem1.png"
@@ -120,6 +129,7 @@
             ]
         },
         {
+            "id": 10,
             "imgs": [
                 "./img/imagens-oculos/imagem3.jpeg",
                 "./img/imagens-oculos/imagem3.jpeg"
@@ -135,6 +145,7 @@
     ],
     "MASCULINOS": [
         {
+            "id": 11,
             "imgs": [
                 "./img/imagens-oculos/front.png",
                 "./img/imagens-oculos/front.png"
@@ -148,6 +159,7 @@
             ]
         },
         {
+            "id": 12,
             "imgs": [
                 "./img/imagens-oculos/imagem1.png",
                 "./img/imagens-oculos/imagem1.png"
@@ -161,6 +173,7 @@
             ]
         },
         {
+            "id": 13,
             "imgs": [
                 "./img/imagens-oculos/imagem2.jpeg",
                 "./img/imagens-oculos/imagem2.jpeg"
@@ -174,6 +187,7 @@
             ]
         },
         {
+            "id": 14,
             "imgs": [
                 "./img/imagens-oculos/imagem3.jpeg",
                 "./img/imagens-oculos/imagem3.jpeg"
@@ -187,6 +201,7 @@
             ]
         },
         {
+            "id": 15,
             "imgs": [
                 "./img/imagens-oculos/imagem3.jpeg",
                 "./img/imagens-oculos/imagem3.jpeg"
@@ -202,6 +217,7 @@
     ],
     "INFANTIS": [
         {
+            "id": 16,
             "imgs": [
                 "./img/imagens-oculos/front.png",
                 "./img/imagens-oculos/front.png"
@@ -215,6 +231,7 @@
             ]
         },
         {
+            "id": 17,
             "imgs": [
                 "./img/imagens-oculos/imagem1.png",
                 "./img/imagens-oculos/imagem1.png"
@@ -228,6 +245,7 @@
             ]
         },
         {
+            "id": 18,
             "imgs": [
                 "./img/imagens-oculos/imagem2.jpeg",
                 "./img/imagens-oculos/imagem2.jpeg"
@@ -241,6 +259,7 @@
             ]
         },
         {
+            "id": 19,
             "imgs": [
                 "./img/imagens-oculos/imagem3.jpeg",
                 "./img/imagens-oculos/imagem3.jpeg"
@@ -254,6 +273,7 @@
             ]
         },
         {
+            "id": 20,
             "imgs": [
                 "./img/imagens-oculos/imagem3.jpeg",
                 "./img/imagens-oculos/imagem3.jpeg"
@@ -269,6 +289,7 @@
     ],
     "DICAS GOLDEN": [
         {
+            "id": 21,
             "imgs": [
                 "./img/imagens-oculos/front.png",
                 "./img/imagens-oculos/front.png"
@@ -282,6 +303,7 @@
             ]
         },
         {
+            "id": 22,
             "imgs": [
                 "./img/imagens-oculos/imagem1.png",
                 "./img/imagens-oculos/imagem1.png"
@@ -295,6 +317,7 @@
             ]
         },
         {
+            "id": 23,
             "imgs": [
                 "./img/imagens-oculos/imagem2.jpeg",
                 "./img/imagens-oculos/imagem2.jpeg"
@@ -308,6 +331,7 @@
             ]
         },
         {
+            "id": 24,
             "imgs": [
                 "./img/imagens-oculos/imagem3.jpeg",
                 "./img/imagens-oculos/imagem3.jpeg"
@@ -321,6 +345,7 @@
             ]
         },
         {
+            "id": 25,
             "imgs": [
                 "./img/imagens-oculos/imagem3.jpeg",
                 "./img/imagens-oculos/imagem3.jpeg"

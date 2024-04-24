@@ -2,13 +2,45 @@ $(document).ready(function () {
     var database;
     var categoria;
 
+    function changeSVG(params) {
+        $('img.svg').each(function () {
+            var $img = $(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
+
+            $.get(imgURL, function (data) {
+                var $svg = $(data).find('svg');
+                if (typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+                if (typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass + ' replaced-svg');
+                }
+                $svg = $svg.removeAttr('xmlns:a');
+                $img.replaceWith($svg);
+            });
+        });
+
+    }
+
     function adicionarItem(produto) {
-        var li = $("<li>").addClass("item");
-        var divCircle = $("<div>").addClass("circle");
-        var svgElement = $('<svg xmlns="http://www.w3.org/2000/svg" class="utilities__icons ico--wishlist icone-like" width="21" height="21" viewBox="0 0 21 21" fill="none"><path d="M15.057 0.876321C12.5247 0.830199 11.1787 2.83649 10.5171 4.10483C9.19393 1.59121 7.77948 0.761017 5.58936 0.876321C3.03423 0.991625 0.775676 3.13628 0.866931 6.38785C1.00381 12.2222 10.5399 20.5011 10.5399 20.5011C10.5399 20.5011 14.327 16.9497 16.8137 13.7212C17.8631 12.3606 20.2129 8.97066 20.2129 6.24949C20.2129 3.52831 18.2738 0.922442 15.057 0.876321Z" stroke="#000" stroke-width="0.75" stroke-miterlimit="10"/></svg>');
+
+        var li = $("<li>").addClass(`item`).addClass(`item-${produto.id}`);
+        var divCircle = $("<div>").addClass("circle")
+            .click(function () {
+                mudarCorFillSVG($(this), '#E91E63');
+                adicionarProdutoSelecionado(produto);
+            });
         var imgLike = $("<img>").addClass("icone-like")
-            .attr("src", "data:image/svg+xml;base64," + btoa(svgElement.prop('outerHTML')))
-            .attr("alt", "Like produto");
+            .addClass(`svg airplane `)
+            .attr('id', produto.id)
+            .attr("src", "./img/icons/coracao.svg")
+            .attr("alt", "Like produto")
+        if (marcarLike(produto.id)) {
+            imgLike.addClass('marcado')
+        }
+
         var link = $("<a>").attr("href", "https://api.whatsapp.com/send?phone=556198366-5716&text=Olá,%20gostaria%20de%20mais%20informações").attr("target", "_blank");
         var imgProduto = $("<img>").addClass("imagem-produto").attr("src", produto.imgs[0]).attr("alt", "Óculos");
         var descricaoProduto = $("<p>").addClass("descricao-produto").text(produto.descricao);
@@ -28,6 +60,70 @@ $(document).ready(function () {
         li.append(link);
 
         $(".itens").append(li);
+        changeSVG();
+    }
+
+    function mudarCorFillSVG($elemento, cor) {
+        $elemento.find('.icone-like').addClass('marcado');
+    }
+
+    function adicionarProdutoSelecionado(produto) {
+        var produtosArmazenados = JSON.parse(localStorage.getItem('produtosSelecionados')) || {};
+        if (!produtosArmazenados[categoria]) {
+            produtosArmazenados[categoria] = [];
+        }
+        const objetosComID2 = produtosArmazenados[categoria].filter(objeto => objeto.id === produto.id);
+        if (categoria != 'LIKE') {
+            if (objetosComID2.length > 0) {
+                produtosArmazenados[categoria].pop(produto);
+                $(document).find(`#${produto.id}`).removeClass('marcado');
+            } else {
+                produtosArmazenados[categoria].push(produto);
+            }
+            localStorage.setItem('produtosSelecionados', JSON.stringify(produtosArmazenados));
+        } else {
+            Object.keys(produtosArmazenados).map((a) => {
+                produtosArmazenados[a].map((produtoAchado) => {
+                    if (produtoAchado.id === produto.id) {
+                        produtosArmazenados[a] = produtosArmazenados[a].filter(produto => produto !== produtoAchado)  //.pop(produtoAchado);
+                        localStorage.setItem('produtosSelecionados', JSON.stringify(produtosArmazenados));
+                        $(document).find(`.item-${produto.id}`).fadeOut();
+                        $(document).find(`#${produto.id}`).removeClass('marcado');
+                    }
+                })
+            });
+        }
+
+    }
+
+    $('.like').click(carregarItensLike)
+
+    function carregarItensLike() {
+        $(".categorias li").removeClass("selecionado");
+        categoria = 'LIKE';
+        $(".itens").empty();
+        let liked = JSON.parse(localStorage.getItem('produtosSelecionados'));
+        Object.keys(liked).map((a) => {
+            liked[a].map((produto) => {
+                adicionarItem(produto);
+            })
+        });
+    }
+
+    function marcarLike(id) {
+        let valor = false
+        let liked = JSON.parse(localStorage.getItem('produtosSelecionados'));
+        if (!liked) {
+            return false
+        }
+        Object.keys(liked).map((a) => {
+            liked[a].map((produto) => {
+                if (produto.id == id) {
+                    valor = true;
+                }
+            })
+        });
+        return valor;
     }
 
     function carregarItensCategoria(categoria) {
@@ -49,8 +145,8 @@ $(document).ready(function () {
             $(".categorias ul").append(categoriaItem);
         });
 
-        carregarItensCategoria("GLAMUROSAS");
         categoria = "GLAMUROSAS";
+        carregarItensCategoria(categoria);
 
         $(".categorias li").click(function () {
             $(".categorias li").removeClass("selecionado");
@@ -63,19 +159,30 @@ $(document).ready(function () {
 
     $(".search-bar input").on("input", function () {
         var query = $(this).val();
-        filtrarProdutos(query, categoria);
+        filtrarProdutos(query);
     });
 
-    function filtrarProdutos(query, categoriaSelecionada) {
+    function filtrarProdutos(query) {
         $(".itens").empty();
         var encontrouCorrespondencia = false;
-
-        if (database.hasOwnProperty(categoriaSelecionada)) {
-            $.each(database[categoriaSelecionada], function (index, produto) {
-                if (produto.descricao.toLowerCase().includes(query.toLowerCase())) {
-                    adicionarItem(produto);
-                    encontrouCorrespondencia = true;
-                }
+        if (categoria != 'LIKE') {
+            if (database.hasOwnProperty(categoria)) {
+                $.each(database[categoria], function (index, produto) {
+                    if (produto.descricao.toLowerCase().includes(query.toLowerCase())) {
+                        adicionarItem(produto);
+                        encontrouCorrespondencia = true;
+                    }
+                });
+            }
+        } else {
+            let liked = JSON.parse(localStorage.getItem('produtosSelecionados'));
+            Object.keys(liked).map((a) => {
+                liked[a].map((produto) => {
+                    if (produto.descricao.toLowerCase().includes(query.toLowerCase())) {
+                        adicionarItem(produto);
+                        encontrouCorrespondencia = true;
+                    }
+                })
             });
         }
 
@@ -92,11 +199,11 @@ $(document).ready(function () {
         carregarItensCategoria(categoriaEscolhida);
         categoria = categoriaEscolhida;
         var query = $(".search-bar input").val();
-        filtrarProdutos(query, categoriaEscolhida);
+        filtrarProdutos(query);
     });
 
     $(".search-bar input").on("input", function () {
         var query = $(this).val();
-        filtrarProdutos(query, categoria);
+        filtrarProdutos(query);
     });
 });
