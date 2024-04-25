@@ -1,98 +1,182 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-lt-installed="true">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="./img/icons/shortcut-icon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>By Sun</title>
+    <title>Orçamento</title>
+    <meta name="description"
+        content="A página apresenta uma série de serviços oferecidos, como a criação de sites em HTML, design e desenvolvimento, responsividade, integração de conteúdo, SEO (Otimização para Mecanismos de Busca), testes e garantia de qualidade, integração com serviços externos, treinamento e suporte, hospedagem e domínio, manutenção e atualizações. Cada serviço é detalhado, fornecendo uma compreensão abrangente dos benefícios oferecidos. Além disso, a página inclui uma seção de visualização do protótipo do site em dispositivos móveis e de desktop, bem como detalhes sobre uma promoção especial de indicação, oferecendo a primeira manutenção gratuita do site para clientes indicados. A seção de valores apresenta informações sobre descontos especiais concedidos por indicações e detalhes sobre opções de pagamento, como PIX.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".service-item").click(function () {
+                // $(this).find(".service-description").slideToggle();
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <header id="header" class="header center">
-        <div class="center">
-            <div class="center">
-                <img class="icon-oculos" src="img/icons/icon-oculos.svg" alt="icone de óculos">
-                <p class="botao"> acessibilidades</p>
-            </div>
-            <p class="botao">atendimento</p>
+    <header style="display: flex;align-items: center;justify-content: space-between;">
+        <div style="display: flex;gap: 10px;">
+            <img src="./img/dinheiro.png" alt="Dinheiro" style="width: 30px;height: 30px;">
+            <h1>ORÇAMENTO</h1>
         </div>
-        <div class="center">
-            <p class="botao">seja um franqueado</p>
-            <p class="botao">selecione seu pais</p>
+        <div style="display: flex;flex-direction: column;align-items: flex-end;gap: 10px;">
+            <a href="tel:+5561985992343" target="_blank">(61) 98599-2343</a>
+            <a href="https://wa.me/+5561985992343" target="_blank">Whatsapp</a>
+            <a href="mailto:vandopintoo@gmail.com" target="_blank">vandopintoo@gmail.com</a>
         </div>
     </header>
-
-
-
-
-    <section class="segunda-barra">
-        <div class="menu">
-            <img src="./img/icons/menu.svg" alt="icone menu">
-        </div>
-        <div class="logo">
-            <a href="#">
-                <p>BYSUNOCULOS</p>
-            </a>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Busque por modelos ou coleção">
-            <button type="submit"><i class="fas fa-search"></i></button>
-        </div>
-        <div class="center welcome">
-            <div class="login center">
-                <img src="./img/icons/user.svg" alt="Avatar de login">
-                <div>
-                    <p>Bem Vindo(a)!</p>
-                    <p>Entre ou cadastre-se</p>
-                </div>
-            </div>
-            <div class="search-place center">
-                <img src="./img/icons/pin.svg" alt="pino de localização">
-                <div>
-                    <p>Encontre uma loja</p>
-                </div>
-            </div>
-        </div>
-        <div class="center container-like">
-            <div class="like center">
-                <img src="./img/icons/coracao.svg" alt="Like">
-            </div>
-            <div class="bag center">
-                <img src="./img/icons/bag.svg" alt="sacola">
-            </div>
-        </div>
-    </section>
-    <section class="lista-opcoes categorias">
-        <ul></ul>
-    </section>
-
-
-
-    <section class="resultado-busca">
-        <div class="lista-itens">
-            <ul class="itens">
+    <main>
+        <section class="servicos"
+            style="background-color: #05375c;border-radius: 22px;width: 70%;padding: 30px;margin: 90px auto;display: flex;flex-wrap: wrap;align-items: center;justify-content: center;flex-direction: column;">
+            <h2 class="section-title">Serviços atribuídos</h2>
+            <ul style="display: flex;flex-direction: column;height: auto;align-items: flex-start;">
+                <li>Criação de site em HTML</li>
+                <li>Design e Desenvolvimento</li>
+                <li>Responsividade</li>
+                <li>Integração de Conteúdo</li>
+                <li>SEO (Search Engine Optimization)</li>
+                <li>Testes e Garantia de Qualidade</li>
+                <li>Integração com Serviços Externos</li>
+                <li>Treinamento e Suporte</li>
+                <li>Hospedagem e Domínio</li>
+                <li>Manutenção e Atualizações</li>
             </ul>
-        </div>
-    </section>
-    <footer class="rodape">
-        <a href="#" class="link-topo">voltar ao topo</a>
-        <a href="#">
-            <div class="logo-footer">
-                <p>BYSUNOCULOS</p>
+        </section>
+        <section id="services-section" style="margin: 100px 110px;display: flex;flex-direction: column;">
+            <h2 style="font-size: 20px;margin-bottom: 20px;text-align: center;">Descrição dos Serviços</h2>
+            <div class="service-item">
+                <h2 class="service-title">Criação de site em HTML:</h2>
+                <div class="divisor"></div>
+                <p class="service-description">Este serviço envolve a criação de um site utilizando a linguagem de
+                    marcação HTML. Isso inclui a estruturação do conteúdo, como texto, imagens e links, de acordo com as
+                    necessidades e especificações do cliente.</p>
             </div>
-        </a>
-        <div class="redes-sociais">
-            <a href="https://www.facebook.com/bysunoculos" target="_blank" class="link-facebook"><img
-                    src="./img/icons/icon-facebook.webp" alt="facebook"></a>
-            <a href="https://www.instagram.com/bysunoculos/" target="_blank" class="link-instagram"><img
-                    src="./img/icons/icon-insta.webp" alt="instagran"></a>
-        </div>
-    </footer>
-    <script src="./src/script.js"></script>
-    <!-- <script src="./src/SVGReplace.js"></script> -->
+            <div class="service-item">
+                <h2 class="service-title">Design e Desenvolvimento:</h2>
+                <div class="divisor"></div>
+                <p class="service-description">Consiste na concepção visual e implementação técnica do site. Isso inclui
+                    a seleção de cores, tipografia, layout e outros elementos visuais, bem como a codificação do site
+                    utilizando HTML, CSS e possivelmente JavaScript para torná-lo funcional e atraente.</p>
+            </div>
+            <div class="service-item">
+                <h2 class="service-title">Responsividade:</h2>
+                <div class="divisor"></div>
+                <p class="service-description">Refere-se à capacidade do site de se adaptar e funcionar corretamente em
+                    diferentes dispositivos e tamanhos de tela, como desktops, tablets e smartphones. Isso geralmente
+                    envolve a criação de layouts flexíveis e o uso de técnicas de design responsivo.</p>
+            </div>
+            <div class="service-item">
+                <h2 class="service-title">Integração de Conteúdo:</h2>
+                <div class="divisor"></div>
+                <p class="service-description">Envolve a incorporação de textos, imagens, vídeos e outros elementos de
+                    mídia ao site. Isso pode incluir a criação de páginas, formulários de contato, galerias de imagens,
+                    entre outros.</p>
+            </div>
+            <div class="service-item">
+                <h2 class="service-title">SEO (Search Engine Optimization):</h2>
+                <div class="divisor"></div>
+                <p class="service-description">É o processo de otimização do site para melhorar sua visibilidade nos
+                    resultados dos mecanismos de busca, como o Google. Isso inclui a seleção de palavras-chave
+                    relevantes, otimização de meta tags, estruturação de URLs e outras práticas para aumentar o tráfego
+                    orgânico.</p>
+            </div>
+            <div class="service-item">
+                <h2 class="service-title">Testes e Garantia de Qualidade:</h2>
+                <div class="divisor"></div>
+                <p class="service-description">Consiste na realização de testes rigorosos para garantir que o site
+                    funcione corretamente em diferentes navegadores, dispositivos e ambientes. Isso inclui a
+                    identificação e correção de bugs, bem como a verificação da usabilidade e acessibilidade do site.
+                </p>
+            </div>
+            <div class="service-item">
+                <h2 class="service-title">Integração com Serviços Externos:</h2>
+                <div class="divisor"></div>
+                <p class="service-description">Refere-se à integração do site com outros serviços ou plataformas
+                    externas, como sistemas de gerenciamento de conteúdo (CMS), sistemas de comércio eletrônico, APIs de
+                    terceiros, entre outros.</p>
+            </div>
+            <div class="service-item">
+                <h2 class="service-title">Treinamento e Suporte:</h2>
+                <div class="divisor"></div>
+                <p class="service-description">Envolve a oferta de treinamento para que o cliente possa gerenciar e
+                    atualizar o site por conta própria, bem como o fornecimento de suporte técnico contínuo para
+                    resolver quaisquer problemas ou dúvidas que possam surgir.</p>
+            </div>
+            <div class="service-item">
+                <h2 class="service-title">Hospedagem e Domínio:</h2>
+                <div class="divisor"></div>
+                <p class="service-description">Inclui o fornecimento de serviços de hospedagem para armazenar o site e
+                    torná-lo acessível na internet, bem como o registro e configuração de um domínio exclusivo para o
+                    site.</p>
+            </div>
+            <div class="service-item">
+                <h2 class="service-title">Manutenção e Atualizações:</h2>
+                <div class="divisor"></div>
+                <p class="service-description">Consiste na realização de atualizações regulares do site para manter o
+                    conteúdo e funcionalidades atualizados, além de garantir a segurança e o desempenho do site a longo
+                    prazo.</p>
+            </div>
+        </section>
+        <section class="prototipo">
+            <h2 class="section-title">Visualização do Protótipo</h2>
+            <div class="container-iframe">
+                <h2 class="section-title">Mobile</h2>
+                <div class="mobile-iframe-container" style="margin-bottom: 30px;">
+                    <iframe src="./projeto/index.html"></iframe>
+                </div>
+            </div>
+            <div class="container-iframe-dekstop">
+                <h2 class="section-title">Dekstop (Computador)</h2>
+                <a href="./projeto/index.html" target="_blank"
+                    style="color: white;padding: 20px; text-decoration: underline;">Abrir protótipo em
+                    uma nova aba</a>
+                <iframe src="./projeto/index.html" frameborder="0" width="100%" height="500px"></iframe>
+            </div>
+        </section>
+        <section class="prototipo-mobile">
+            <div class="container-iframe-dekstop">
+                <h2 class="section-title">Dekstop (Computador)</h2>
+                <a href="./projeto/index.html" target="_blank" style="color: white;padding: 20px;">Abrir protótipo em
+                    uma nova aba</a>
+            </div>
+        </section>
+        <section class="valores" style="display: flex;margin-top: 110px;align-items: center;gap: 30px;">
+            <div>
+                <h1>Promoção de Indicação: Primeira Manutenção Gratuita do Site</h1>
+                <p>Aproveite nossa promoção especial de indicação! Ao recomendar nossos serviços a outras pessoas e
+                    elas se tornarem nossos clientes, você terá direito à primeira manutenção do seu site
+                    gratuitamente.</p>
+                <p>Esta é uma ótima oportunidade para garantir que seu site esteja sempre atualizado e funcionando
+                    perfeitamente, sem custo adicional para você.</p>
+                <p>Entre em contato conosco para mais detalhes sobre como participar desta promoção e aproveitar
+                    esta oferta exclusiva.</p>
+                <!-- <p>Desconto especial de 25% concedido por ter sido indicado.</p> -->
+            </div>
+            <div class="etiqueta" style="background-color: #05375c;border-radius: 22px;padding: 30px 70px;">
+                <div style="display: flex;align-items: center;justify-content: space-evenly; gap: 20px;">
+                    <div class="desconto"
+                        style="background-color: #18e6ac;padding: 10px;border-radius: 22px;color: #264c64;font-weight: bold;font-size: 34px;">
+                        -25%</div>
+                    <p class="valor-real"
+                        style="font-size: 34px;font-weight: bold;text-decoration: line-through; line-height: 0; width: 200px;">
+                        R$
+                        4.000,00 </p>
+                </div>
+                <div style="display: flex;align-items: center;justify-content: space-around;flex-direction: column;">
+                    <p class="preco" style="color: #18e6ac;font-size: 42px;font-weight:  bold;line-height: 0;">
+                        R$ ∞</p>
+                </div>
+            </div>
+            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                <img src="./img/download.png" alt="pix"
+                    style="width: 210px; height: auto; border: 1px solid white;padding: 10px;">
+                <p style="text-align: center;">PIX<br>Vando Carvalho Rodrigues Pinto<br>Chave-pix: 71730745172 </p>
+            </div>
+        </section>
+    </main>
 </body>
-
-</html>

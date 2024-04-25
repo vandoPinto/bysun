@@ -1,0 +1,263 @@
+@import url(./resete.css);
+
+:root {
+    --background-gradient: linear-gradient(to top left, #101936, #264c64, #647386);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background-gradient);
+    color: #e2e7eb;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li:before {
+    content: "\2713\0020";
+    color: #007bff;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+/* .divisor {
+    border-top: 1px dashed #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+} */
+
+.observation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.observation div {
+    flex: 1;
+}
+
+.observation div:last-child {
+    text-align: right;
+}
+
+.discount {
+    font-size: 24px;
+    color: #007bff;
+}
+
+.price {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.payment-terms {
+    font-size: 14px;
+    color: #666;
+}
+
+.mobile-iframe-container {
+    width: 365px;
+    height: 700px;
+    transform-origin: 0 0;
+    border: 1px solid #ccc;
+    background-color: white;
+
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: white;
+}
+
+.container-iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 32px;
+}
+
+.container-iframe-dekstop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid;
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.service-item {
+    cursor: pointer;
+}
+
+.service-title:hover {
+    /* border: 1px solid white; */
+    /* border-radius: 50px; */
+    /* padding: 10px; */
+    text-decoration: underline;
+}
+
+.service-description {
+    /* display: none; */
+}
+
+.etiqueta {
+    background-color: #05375c;
+    border-radius: 22px;
+    padding: 30px 70px;
+}
+
+.prototipo-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    h1 {
+        font-size: 16px !important;
+    }
+
+    h1 {
+        font-size: 15px !important;
+    }
+
+    p,
+    a,
+    li {
+        font-size: 12px !important;
+    }
+
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .servicos {
+        margin: 20px auto !important;
+        width: 100%;
+    }
+
+    #services-section {
+        margin: 30px auto !important;
+    }
+
+    .service-title {
+        font-size: 20px;
+    }
+
+    .service-description {
+        margin-top: 10px;
+    }
+
+    .container-iframe {
+        width: 100%;
+    }
+
+    .mobile-iframe-container {
+        width: 100%;
+        height: 551px;
+    }
+
+    .valores {
+        flex-direction: column;
+        margin-top: 40px !important;
+    }
+
+    .desconto {
+        font-size: 30px !important;
+        margin-right: 10px;
+    }
+
+    .desconto p {
+        font-size: 34px !important;
+        /* margin-right: 10px; */
+    }
+
+    .valor-real {
+        font-size: 34px !important;
+        /* margin-right: 10px; */
+    }
+
+    .prototipo {
+        display: none;
+    }
+
+    .prototipo-mobile {
+        display: block;
+    }
+
+    .container-iframe-dekstop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid;
+        height: auto;
+    }
+
+    .etiqueta {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px !important;
+    }
+
+    .preco {
+        font-size: 45px !important;
+    }
+}
