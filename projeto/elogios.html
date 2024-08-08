@@ -1,3 +1,54 @@
+<style>
+    .testimonial {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 30px;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    .quote {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 15px;
+        font-style: italic;
+        position: relative;
+    }
+
+    .quote::before {
+        content: '“';
+        font-size: 50px;
+        color: #ccc;
+        position: absolute;
+        left: -25px;
+        top: -10px;
+    }
+
+    .quote::after {
+        content: '”';
+        font-size: 50px;
+        color: #ccc;
+        position: absolute;
+        right: -25px;
+        bottom: -10px;
+    }
+
+    .author {
+        font-size: 16px;
+        color: #555;
+        font-weight: bold;
+    }
+
+    .author a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .author a:hover {
+        text-decoration: underline;
+    }
+</style>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -7,14 +58,11 @@
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="./img/icons/shortcut-icon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./src/js/lightzoom.js"></script>
     <title>By Sun</title>
 </head>
 
 <body>
-    <a href="https://wa.me/5561983665716" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <img src="./img/icons/whatsap.png" alt="">
-    </a>
     <section class="header">
         <div class="menu">
             <img src="./img/icons/menu.svg" alt="icone menu">
@@ -35,42 +83,65 @@
                     class="link-facebook icon-social-media"><img src="./img/icons/facebook.svg" alt="facebook"></a>
                 <a href="https://wa.me/5561983665716" target="_blank" class="link-whatsapp icon-social-media"><img
                         src="./img/icons/whatsapp.svg" alt="whatsapp"></a>
+                <!-- <div class="like center">
+                    <img src="./img/icons/coracao.svg" alt="Like">
+                </div> -->
             </div>
         </div>
     </section>
-
     <section class="lista-opcoes categorias">
         <ul>
-            <li class="lista-categorias">MASCULINO</li>
-            <li class="lista-categorias">FEMININO</li>
-            <li class="lista-categorias">INFANTIL</li>
-            <li class="lista-categorias">PROMOÇÕES</li>
-            <a href="elogios.html">
-                <li class="lista-categorias">ELOGIOS</li>
+            <a href="index.html">
+                <li class="lista-categorias">MASCULINO</li>
             </a>
-            <a href="historia.html">
+            <a href="index.html">
+                <li class="lista-categorias">FEMININO</li>
+            </a>
+            <a href="index.html">
+            </a>
+            <a href="index.html">
+                <li class="lista-categorias">PROMOÇÕES</li>
+            </a>
+            <a href="elogios.html">
+                <li class="lista-categorias selecionado">ELOGIOS</li>
+            </a>
+            <a href="index.html">
                 <li class="lista-categorias">NOSSA HISTÓRIA</li>
             </a>
+
         </ul>
     </section>
 
-    <div class="carousel-container">
-        <div class="carousel-images">
-            <img src="./img/carrocel/img3.png" alt="Image 1">
-            <img src="./img/carrocel/img2.png" alt="Image 2">
-            <img src="./img/carrocel/img3.png" alt="Image 3">
-            <img src="./img/carrocel/img2.png" alt="Image 4">
-        </div>
-        <button class="prev">Prev</button>
-        <button class="next">Next</button>
-    </div>
+    <section>
 
-    <section class="resultado-busca">
+        <div class="testimonial">
+            <p class="quote">Olha só os óculos me surpreenderam muito. Inclusive pedalei na sexta-feira até o
+                taguaparque e fui com. Apesar de não ser o tipo apropriado, representou
+                <br>Ficou bem preso ao rosto o tempo todo. Parabéns aí produto excelente.
+            </p>
+            <p class="author"><strong>Amanda</strong><br>
+                <!-- <a href="https://divamoveis.com.br/">https://divamoveis.com.br/</a> -->
+            </p>
+        </div>
+        <div class="testimonial">
+            <p class="quote">Olha só os óculos me surpreenderam muito. Inclusive pedalei na sexta-feira até o
+                taguaparque e fui com. Apesar de não ser o tipo apropriado, representou
+                <br>Ficou bem preso ao rosto o tempo todo. Parabéns aí produto excelente.
+            </p>
+            <p class="author"><strong>Amanda</strong><br>
+                <!-- <a href="https://divamoveis.com.br/">https://divamoveis.com.br/</a> -->
+            </p>
+        </div>
+
+
+    </section>
+    <!-- <section class="resultado-busca">
         <div class="lista-itens">
             <ul class="itens">
             </ul>
         </div>
-    </section>
+    </section> -->
+
     <footer class="rodape">
         <a href="#" class="link-topo">voltar ao topo</a>
         <a href="index.html">
@@ -87,6 +158,7 @@
                     src="./img/icons/whatsapp.svg" alt="whatsapp"></a>
         </div>
     </footer>
+    <!-- <script src="./src/js/detalhes.js"></script> -->
     <script src="./src/js/script.js"></script>
 </body>
 
