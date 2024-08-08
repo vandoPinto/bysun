@@ -198,14 +198,14 @@ $(document).ready(function () {
         $(".itens").empty();
         var encontrouCorrespondencia = false;
         if (categoria != 'LIKE') {
-            if (database.hasOwnProperty(categoria)) {
-                $.each(database[categoria], function (index, produto) {
+            $.each(database, function (categoria, produtos) {
+                $.each(produtos, function (index, produto) {
                     if (produto.descricao.toLowerCase().includes(query.toLowerCase())) {
                         adicionarItem(produto);
                         encontrouCorrespondencia = true;
                     }
                 });
-            }
+            });
         } else {
             let liked = JSON.parse(localStorage.getItem('produtosSelecionados'));
             Object.keys(liked).map((a) => {
@@ -238,4 +238,33 @@ $(document).ready(function () {
         var query = $(this).val();
         filtrarProdutos(query);
     });
+
+
+
+
+
+    var currentIndex = 0;
+    var images = $('.carousel-images img');
+    var totalImages = images.length;
+
+    function showImage(index) {
+        var offset = -index * 100 + '%';
+        $('.carousel-images').css('transform', 'translateX(' + offset + ')');
+    }
+
+    $('.next').click(function () {
+        currentIndex = (currentIndex + 1) % totalImages;
+        showImage(currentIndex);
+    });
+
+    $('.prev').click(function () {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        showImage(currentIndex);
+    });
+
+    // Auto slide (opcional)
+    setInterval(function () {
+        currentIndex = (currentIndex + 1) % totalImages;
+        showImage(currentIndex);
+    }, 3000); // Muda a cada 3 segundos
 });

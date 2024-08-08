@@ -97,8 +97,6 @@ function detalhesItem(produto) {
     $(".itens").css('display', 'block')
     $(".itens").append(mainContainer);
 
-
-
     $('.light-zoom').lightzoom({
         zoomPower: 4,    //Default
         glassSize: 250,  //Default
@@ -107,12 +105,7 @@ function detalhesItem(produto) {
     $('.thumbs img').click(function (e) {
         var cover = $('.light-zoom');
         var thumb = $(this).attr('src');
-        console.log(cover);
-        // console.log(thumb);
-
         if (cover.attr('src') !== thumb) {
-            // console.log(cover);
-
             cover.fadeTo('200', '0', () => {
                 cover.attr('src', thumb);
                 cover.fadeTo('150', '1')

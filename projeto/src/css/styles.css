@@ -114,7 +114,9 @@ p {
     border-radius: 5px;
     padding: 5px;
     width: 70%;
+    /* max-width: 500px; */
     height: 35px;
+    transition: width 0.3s ease;
 }
 
 .search-bar input {
@@ -133,6 +135,24 @@ p {
     background-position: center;
     width: 35px;
     height: 35px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .search-bar {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .search-bar {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .search-bar {
+        width: 30%;
+    }
 }
 
 .login {
@@ -556,6 +576,12 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+
+    button.prev,
+    button.next {
+        display: none;
+    }
+
     .search-bar {
         display: none;
     }
@@ -745,4 +771,56 @@ img {
     background-color: #22c35e;
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+
+
+
+
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    margin-bottom: 20px;
+    /* Altura fixa para o carrossel */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-images img {
+    min-width: 100%;
+    /* Cada imagem ocupa 100% da largura do contêiner */
+    height: 100%;
+    object-fit: cover;
+    /* Mantém a proporção da imagem sem distorção */
+}
+
+
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
 }
