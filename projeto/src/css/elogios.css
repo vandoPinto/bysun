@@ -1,0 +1,49 @@
+.testimonial {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.quote {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    font-style: italic;
+    position: relative;
+}
+
+.quote::before {
+    content: '“';
+    font-size: 50px;
+    color: #ccc;
+    position: absolute;
+    left: -25px;
+    top: -10px;
+}
+
+.quote::after {
+    content: '”';
+    font-size: 50px;
+    color: #ccc;
+    position: absolute;
+    right: -25px;
+    bottom: -10px;
+}
+
+.author {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+}
+
+.author a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.author a:hover {
+    text-decoration: underline;
+}

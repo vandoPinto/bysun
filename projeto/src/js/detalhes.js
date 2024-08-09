@@ -8,7 +8,7 @@ function detalhesItem(produto) {
     var thumbs = $("<div>").addClass("thumbs");
 
 
-    var imgProduto = $("<img>").attr("src", './img/imagens-oculos/' + produto.imgs[0]).attr("alt", "").css("max-height", "450px").addClass('light-zoom');
+    var imgProduto = $("<img>").attr("src", './img/imagens-oculos/' + produto.imgs[0]).attr("alt", "").css("max-height", "450px").css('width', 'auto').addClass('light-zoom');
     var textoContainer = $("<div>").addClass("texto-container style2");
     var tituloProduto = $("<h1>").addClass("style3").text(produto.descricao);
     var linkConhecer = $("<a>").addClass("style4").attr("href", "#mais").text("conheça mais sobre este produto");
