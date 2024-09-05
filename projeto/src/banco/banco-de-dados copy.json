@@ -1,0 +1,568 @@
+{
+    "FEMININO": [
+        {
+            "id": 6,
+            "imgs": [
+                "img1.jpeg",
+                "img2.jpeg",
+                "img3.jpeg",
+                "img4.jpeg"
+            ],
+            "descricao": "Óculos de Sol Feminino Oval",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "descricaoProduto": [
+                "Estilo: Oval",
+                "Óculos de sol com design elegante e vintage.",
+                "Perfeito para adicionar um toque de sofisticação ao seu look.",
+                "Proteção UV: 100% UVA / UVB",
+                "Cor da armação: Marrom claro",
+                "Cor da lente: Marrom degradê",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 7,
+            "imgs": [
+                "img5.jpeg",
+                "img6.jpeg",
+                "img7.jpeg",
+                "img8.jpeg"
+            ],
+            "descricao": "Óculos de Sol Feminino Gatinho",
+            "precoAntigo": "399,98",
+            "precoNovo": "199,99",
+            "descricaoProduto": [
+                "Estilo: Gatinho",
+                "Óculos de sol clássicos e atemporais.",
+                "Perfeito para quem busca um visual elegante e sofisticado.",
+                "Proteção UV: 100% UVA / UVB",
+                "Cor da armação: Preto",
+                "Cor da lente: Marrom",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 8,
+            "imgs": [
+                "img9.jpeg",
+                "img10.jpeg",
+                "img11.jpeg",
+                "img12.jpeg"
+            ],
+            "descricao": "Óculos de Sol Masculino Retangular",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "descricaoProduto": [
+                "Estilo: Retangular",
+                "Óculos de sol modernos e versáteis.",
+                "Perfeito para quem busca um visual urbano e contemporâneo.",
+                "Armação robusta e confortável para uso diário.",
+                "Cor da armação: Preto",
+                "Cor da lente: Cinza",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 9,
+            "imgs": [
+                "img13.jpeg",
+                "img14.jpeg",
+                "img15.jpeg",
+                "img16.jpeg"
+            ],
+            "descricao": "Óculos de Sol Feminino Quadrado",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "descricaoProduto": [
+                "Estilo: Quadrado",
+                "Óculos de sol clássicos e versáteis.",
+                "Perfeito para quem busca um visual moderno e despojado.",
+                "Proteção UV: 100% UVA / UVB",
+                "Cor da armação: Tartaruga",
+                "Cor da lente: Marrom",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 10,
+            "imgs": [
+                "img17.jpeg",
+                "img18.jpeg",
+                "img19.jpeg",
+                "img20.jpeg"
+            ],
+            "descricao": "Óculos de Sol Masculino Aviador",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "descricaoProduto": [
+                "Estilo: Aviador",
+                "Óculos de sol clássicos e icônicos.",
+                "Perfeito para quem busca um visual elegante e atemporal.",
+                "Proteção UV: 100% UVA / UVB",
+                "Cor da armação: Prata",
+                "Cor da lente: Verde",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        }
+    ],
+    "MASCULINO": [
+        {
+            "id": 1,
+            "imgs": [
+                "img15.jpeg",
+                "img25.jpeg"
+            ],
+            "descricao": "Óculos de Sol Masculino Redondo Polarizado Metal Dourado",
+            "precoAntigo": "399,98",
+            "precoNovo": "199,99",
+            "descricaoProduto": [
+                "Coleção: Linha Clássicos",
+                "Peça chave para o seu dia a dia!",
+                "Se você curte óculos de sol versátil, este modelinho de Óculos de Sol Feminino Redondo Polarizado Metal Dourado é ideal.",
+                "As lentes possuem proteção 100% UVA e UVB, protegendo seus olhos dos raios nocivos do sol reduzindo o risco de desenvolvimento das doenças oculares. Ponte 'U' com apoio nasal embutido e hastes com a assinatura da marca.",
+                "A Linha Clássicos é um best-seller desenvolvido para agradar todos os gostos. Ideal para quem preza por praticidade e peças únicas, com design clássico e atemporal, mas com aquele toque especial para você estar sempre na moda. Na paleta de cores da Linha Clássicos, incluímos tons neutros, versáteis e cores da estação, tudo para combinar com as peças do seu guarda-roupa."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 2,
+            "imgs": [
+                "img26.jpeg",
+                "img30.jpeg",
+                "img15.jpeg",
+                "img25.jpeg"
+            ],
+            "descricao": "Óculos de Sol Feminino Cat Eye",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "descricaoProduto": [
+                "Estilo: Cat Eye",
+                "Óculos de sol com design elegante e moderno.",
+                "Perfeito para adicionar um toque de sofisticação ao seu look.",
+                "Proteção UV: 100% UVA / UVB",
+                "Cor da armação: Preto",
+                "Cor da lente: Gradiente cinza",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 3,
+            "imgs": [
+                "img26.jpeg",
+                "img7.jpeg",
+                "img15.jpeg",
+                "img25.jpeg"
+            ],
+            "descricao": "Óculos de Sol Feminino Oversized",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "descricaoProduto": [
+                "Estilo: Oversized",
+                "Óculos de sol com armação grande e moderna.",
+                "Proporciona proteção eficaz contra os raios UV.",
+                "Perfeito para quem busca um visual ousado e estiloso.",
+                "Cor da armação: Tartaruga",
+                "Cor da lente: Marrom",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 4,
+            "imgs": [
+                "img25.jpeg",
+                "img15.jpeg",
+                "img26.jpeg",
+                "img7.jpeg"
+            ],
+            "descricao": "Óculos de Sol Masculino Aviador",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "descricaoProduto": [
+                "Estilo: Aviador",
+                "Óculos de sol clássicos e atemporais.",
+                "Ideal para quem busca um visual sofisticado e despojado ao mesmo tempo.",
+                "Armação em metal resistente e durável.",
+                "Cor da armação: Prata",
+                "Cor da lente: Verde",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 5,
+            "imgs": [
+                "img25.jpeg",
+                "img15.jpeg",
+                "img26.jpeg",
+                "img7.jpeg"
+            ],
+            "descricao": "Óculos de Sol Masculino Retangular",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "descricaoProduto": [
+                "Estilo: Retangular",
+                "Óculos de sol modernos e versáteis.",
+                "Perfeito para quem busca um visual urbano e contemporâneo.",
+                "Armação robusta e confortável para uso diário.",
+                "Cor da armação: Preto",
+                "Cor da lente: Cinza",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        }
+    ],
+    "INFANTIL": [
+        {
+            "id": 11,
+            "imgs": [
+                "img15.jpeg",
+                "img22.jpeg",
+                "img23.jpeg",
+                "img24.jpeg"
+            ],
+            "descricao": "Óculos de Sol Masculino Retangular",
+            "precoAntigo": "399,98",
+            "precoNovo": "199,99",
+            "descricaoProduto": [
+                "Estilo: Retangular",
+                "Óculos de sol modernos e versáteis.",
+                "Perfeito para quem busca um visual urbano e contemporâneo.",
+                "Armação robusta e confortável para uso diário.",
+                "Cor da armação: Preto",
+                "Cor da lente: Cinza",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 12,
+            "imgs": [
+                "img25.jpeg",
+                "img26.jpeg",
+                "img27.jpeg",
+                "img28.jpeg"
+            ],
+            "descricao": "Óculos de Sol Masculino Aviador",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "descricaoProduto": [
+                "Estilo: Aviador",
+                "Óculos de sol clássicos e icônicos.",
+                "Perfeito para quem busca um visual elegante e atemporal.",
+                "Armação resistente e confortável para uso prolongado.",
+                "Cor da armação: Dourado",
+                "Cor da lente: Marrom",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 13,
+            "imgs": [
+                "img29.jpeg",
+                "img30.jpeg",
+                "img31.jpeg",
+                "img32.jpeg"
+            ],
+            "descricao": "Óculos de Sol Masculino Quadrado",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "descricaoProduto": [
+                "Estilo: Quadrado",
+                "Óculos de sol clássicos e versáteis.",
+                "Perfeito para quem busca um visual moderno e despojado.",
+                "Armação resistente e confortável para uso prolongado.",
+                "Cor da armação: Preto",
+                "Cor da lente: Cinza",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 14,
+            "imgs": [
+                "img33.jpeg",
+                "img34.jpeg",
+                "img31.jpeg",
+                "img32.jpeg"
+            ],
+            "descricao": "Óculos de Sol Masculino Redondo",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "descricaoProduto": [
+                "Estilo: Redondo",
+                "Óculos de sol modernos e estilosos.",
+                "Perfeito para quem busca um visual urbano e descolado.",
+                "Armação leve e confortável para uso diário.",
+                "Cor da armação: Marrom",
+                "Cor da lente: Verde",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 15,
+            "imgs": [
+                "img33.jpeg",
+                "img34.jpeg",
+                "img31.jpeg",
+                "img32.jpeg"
+            ],
+            "descricao": "Óculos de Sol Masculino Aviador",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "descricaoProduto": [
+                "Estilo: Aviador",
+                "Óculos de sol clássicos e icônicos.",
+                "Perfeito para quem busca um visual elegante e atemporal.",
+                "Armação resistente e confortável para uso prolongado.",
+                "Cor da armação: Dourado",
+                "Cor da lente: Marrom",
+                "Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        }
+    ],
+    "PROMOÇÕES": [
+        {
+            "id": 16,
+            "imgs": [
+                "img34.jpeg",
+                "img31.jpeg",
+                "img32.jpeg",
+                "img33.jpeg"
+            ],
+            "descricao": "Óculos de Sol Infantil Redondo Polarizado Metal Dourado",
+            "precoAntigo": "399,98",
+            "precoNovo": "199,99",
+            "descricaoProduto": [
+                "Estilo: Redondo",
+                "Óculos de sol infantis com design encantador.",
+                "Perfeito para proteger os olhos das crianças com estilo.",
+                "Armação resistente e confortável para uso diário.",
+                "Cor da armação: Dourado",
+                "Cor da lente: Cinza",
+                "Inclui: 1 Óculos Solar Infantil, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 17,
+            "imgs": [
+                "img2.jpeg",
+                "img3.jpeg",
+                "img4.jpeg",
+                "img5.jpeg"
+            ],
+            "descricao": "Óculos de Sol Infantil Quadrado",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "descricaoProduto": [
+                "Estilo: Quadrado",
+                "Óculos de sol infantis com design moderno.",
+                "Perfeito para proteger os olhos das crianças com estilo.",
+                "Armação resistente e confortável para uso diário.",
+                "Cor da armação: Preto",
+                "Cor da lente: Azul",
+                "Inclui: 1 Óculos Solar Infantil, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 18,
+            "imgs": [
+                "img3.jpeg",
+                "img4.jpeg",
+                "img5.jpeg",
+                "img2.jpeg"
+            ],
+            "descricao": "Óculos de Sol Infantil Oval",
+            "precoAntigo": "299,99",
+            "precoNovo": "149,99",
+            "descricaoProduto": [
+                "Estilo: Oval",
+                "Óculos de sol infantis com design clássico.",
+                "Perfeito para proteger os olhos das crianças com estilo.",
+                "Armação resistente e confortável para uso diário.",
+                "Cor da armação: Rosa",
+                "Cor da lente: Rosa",
+                "Inclui: 1 Óculos Solar Infantil, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 19,
+            "imgs": [
+                "img4.jpeg",
+                "img5.jpeg",
+                "img2.jpeg",
+                "img3.jpeg"
+            ],
+            "descricao": "Óculos de Sol Infantil Gatinho",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "descricaoProduto": [
+                "Estilo: Gatinho",
+                "Óculos de sol infantis com design divertido.",
+                "Perfeito para proteger os olhos das crianças com estilo.",
+                "Armação resistente e confortável para uso diário.",
+                "Cor da armação: Vermelho",
+                "Cor da lente: Vermelho",
+                "Inclui: 1 Óculos Solar Infantil, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        },
+        {
+            "id": 20,
+            "imgs": [
+                "img5.jpeg",
+                "img2.jpeg",
+                "img4.jpeg",
+                "img3.jpeg"
+            ],
+            "descricao": "Óculos de Sol Infantil Coração",
+            "precoAntigo": "499,99",
+            "precoNovo": "299,99",
+            "descricaoProduto": [
+                "Estilo: Coração",
+                "Óculos de sol infantis com design adorável.",
+                "Perfeito para proteger os olhos das crianças com estilo.",
+                "Armação resistente e confortável para uso diário.",
+                "Cor da armação: Rosa",
+                "Cor da lente: Rosa",
+                "Inclui: 1 Óculos Solar Infantil, 1 Case e 1 Flanela para Limpeza."
+            ],
+            "especificaProduto": {
+                "Material": "Acetato premium ou metal",
+                "Genero": "Feminino",
+                "protecao": "Contra Raios UVA / UVB",
+                "Ítens inclusos": "Case e flanela",
+                "corLente": "Degradê, Marrom"
+            }
+        }
+    ],
+    "ELOGIOS": "",
+    "NOSSA HISTÓRIA": ""
+}

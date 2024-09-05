@@ -45,7 +45,7 @@ $(() => {
                                 $(this).addClass('active'); // Adiciona a classe active no thumbnail clicado
                             });
 
-                            toastr.success('Imagem enviada com sucesso!', 'Sucesso');
+                            // toastr.success('Imagem enviada com sucesso!', 'Sucesso');
                         } else {
                             toastr.info('Imagem já existe: ' + data.url, 'Imagem Existente');
                         }
@@ -58,11 +58,8 @@ $(() => {
             });
         }
 
-
         // Loop através dos arquivos selecionados e envie cada um para o servidor
         $.each(files, function (index, file) {
-
-            // Envie o arquivo para o servidor
             uploadFile(file);
         });
 
@@ -102,7 +99,6 @@ $(() => {
 
             reader.readAsDataURL(file);
         }
-
     });
 
     $('#thumbs-container').on('click', 'img', function () {
@@ -135,6 +131,7 @@ $(() => {
     var produto = obterParametrosURL();
 
     if (produto.id) {
+        // Edição de produto existente, busca os dados e preenche o formulário
         var jsonPath;
         if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
             jsonPath = 'src/banco/banco-de-dados.json'; // Caminho para o ambiente local
@@ -157,12 +154,35 @@ $(() => {
             });
         });
 
-        $('.submit').text('Editar');
+        $('.submit').text('Salvar edição');
+        $('.titulo').text(`Editar Óculos ${produto.categoria || 'Novo'}`);
     } else {
+        // Produto novo, preenche com valores padrão
         console.log("Criar novo produto");
-        $('.excluir').hide();
+
+        // Valores padrão para novo produto
+        // $('#nome').val('Nome do Produto');
+        $('#preco-antigo').val('200,00');
+        $('#preco').val('150,00');
+        $('#descricao').val(
+            `Estilo: Oval
+Óculos de sol com design elegante e vintage.
+Perfeito para adicionar um toque de sofisticação ao seu look.
+Proteção UV: 100% UVA / UVB
+Cor da armação: Marrom claro
+Cor da lente: Marrom degradê
+Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza.`);
+
+        $('#material').val('Acetato premium ou metal');
+        $('#genero').val('Feminino'); // ou outro valor padrão
+        $('#protecao').val('Contra Raios UVA / UVB');
+        $('#itens').val('Case e flanela');
+        $('#cor').val('Degradê, Marrom');
+
+        $('.excluir').hide(); // Esconde o botão de excluir para novo produto
+
+        $('.titulo').text(`Cadastro de Óculos ${produto.categoria || 'Novo'}`);
     }
-    $('.titulo').text(`Cadastro de Óculos ${produto.categoria}`);
 
     $('#oculosForm').submit(function (e) {
         e.preventDefault(); // Prevenir comportamento padrão do formulário
@@ -177,7 +197,7 @@ $(() => {
         var material = $('#material').val();
         var cor = $('#cor').val();
         var protecao = $('#protecao').val();
-        var itens = $('#itens').val('Case e flanela');
+        var itens = $('#itens').val();
         var categoria = produto.categoria || 'NOVO'; // Defina a categoria do produto
 
         // Capturar as imagens
@@ -202,7 +222,7 @@ $(() => {
             "especificaProduto": {
                 "Material": material,
                 "Genero": genero,
-                "proteçao da lente": protecao,
+                "protecao": protecao,
                 "Ítens inclusos": itens,
                 "corLente": cor
             }
@@ -239,43 +259,42 @@ $(() => {
         $('#preco-antigo').val(produtoFind.precoAntigo);
         $('#preco').val(produtoFind.precoNovo);
         $('#descricao').val(produtoFind.descricaoProduto.join("\n"));
-        $('#genero').val(produtoFind.especificaProduto[especificacoes[0]]);
-        $('#material').val(produtoFind.especificaProduto[especificacoes[1]]);
-        $('#cor').val(produtoFind.especificaProduto[especificacoes[2]]);
-        $('#protecao').val(produtoFind.especificaProduto[especificacoes[3]]);
-        $('#itens').val(produtoFind.especificaProduto[especificacoes[4]]);
+        $('#genero').val(produtoFind.especificaProduto[especificacoes[1]]);
+        $('#material').val(produtoFind.especificaProduto[especificacoes[0]]);
+        $('#cor').val(produtoFind.especificaProduto[especificacoes[4]]);
+        $('#protecao').val(produtoFind.especificaProduto[especificacoes[2]]);
+        $('#itens').val(produtoFind.especificaProduto[especificacoes[3]]);
 
-        if (produtoFind.imgs.length > 0) {
-            $('#imagem-preview').attr('src', './img/imagens-oculos/' + produtoFind.imgs[0]);
-        }
-        $('#thumbs-container').empty();
+        // Adiciona as imagens no thumbs-container
+        var thumbsContainer = $('#thumbs-container');
+        thumbsContainer.empty(); // Limpa o contêiner de thumbnails
         produtoFind.imgs.forEach(function (imagem, index) {
-            var imgElement = $('<img>').attr('src', './img/imagens-oculos/' + imagem);
-            if (index === 0) {
-                imgElement.addClass('active');
-            }
-            $('#thumbs-container').append(imgElement);
-        });
+            var thumb = $('<img>', {
+                src: '../../img/imagens-oculos/' + imagem,
+                class: 'thumb'
+            });
+            thumbsContainer.append(thumb);
 
-        $('#thumbs-container img').click(function () {
-            $('#thumbs-container img').removeClass('active');
-            $(this).addClass('active');
-            $('#imagem-preview').attr('src', $(this).attr('src'));
+            // Define a primeira imagem como imagem principal no preview
+            if (index === 0) {
+                $('#imagem-preview').attr('src', '../../img/imagens-oculos/' + imagem);
+            }
+
+            // Adiciona evento de clique para mudar a imagem principal ao clicar em um thumbnail
+            thumb.on('click', function () {
+                $('#imagem-preview').attr('src', '../../img/imagens-oculos/' + imagem);
+                $('#thumbs-container img').removeClass('active'); // Remove a classe active de todos
+                $(this).addClass('active'); // Adiciona a classe active no thumbnail clicado
+            });
         });
     }
 
     function limparFormulario() {
-        $('#oculosForm').trigger('reset'); // Limpar os campos do formulário
-
-        // Limpar o contêiner de thumbnails
+        // $('#oculosForm')[0].reset();
         $('#thumbs-container').empty();
-
-        // Limpar a imagem de visualização
         $('#imagem-preview').attr('src', '');
-
-        // Remover a classe active das imagens
-        $('#thumbs-container img').removeClass('active');
     }
+
 
     $('.excluir').click(() => {
         Swal.fire({
@@ -324,5 +343,4 @@ $(() => {
             }
         });
     })
-
 });

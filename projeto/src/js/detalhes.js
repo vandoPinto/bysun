@@ -79,9 +79,10 @@ function detalhesItem(produto) {
     var especificacoesTipo = $("<div>").addClass("especificacoes-tipo");
     var especificacoesInfo = $("<div>").addClass("especificacoes-info");
 
-
-    var especificacoesLabels = ["Gênero", "Material da Lente", "Cor da Lente", "Proteção da Lente", "Itens Inclusos"];
+    var especificacoesLabels = ["Material da Lente", "Gênero", "Proteção da Lente", "Itens Inclusos", "Cor da Lente"];
     Object.keys(produto.especificaProduto).forEach(function (chave, index) {
+        console.log(chave);
+
         especificacoesTipo.append($("<p>").text(especificacoesLabels[index]));
         especificacoesInfo.append($("<p>").text(produto.especificaProduto[chave]));
     });
