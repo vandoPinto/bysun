@@ -4,36 +4,62 @@ $(() => {
         var files = input.files;
         var thumbsContainer = $('#thumbs-container');
 
-        thumbsContainer.empty(); // Limpa a lista de imagens
+        // Limpa a lista de imagens
+        thumbsContainer.empty();
 
-        // Loop através dos arquivos selecionados
-        $.each(files, function (index, file) {
-            var reader = new FileReader();
+        // Função para enviar cada arquivo para o servidor
+        function uploadFile(file) {
+            var formData = new FormData();
+            formData.append('imagem', file);
 
-            reader.onload = function (e) {
-                // Adiciona as imagens na fila (thumbnails)
-                var thumb = $('<img>', {
-                    src: e.target.result,
-                    class: index === 0 ? 'active' : '' // A primeira imagem será ativa
-                });
-                thumbsContainer.append(thumb);
+            $.ajax({
+                url: 'upload.php', // O URL do seu script PHP de upload
+                type: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    var data = JSON.parse(response);
+                    if (data.status === 'success') {
+                        // Adiciona a imagem no contêiner de thumbnails
+                        var thumb = $('<img>', {
+                            src: data.url,
+                            class: 'thumb'
+                        });
+                        thumbsContainer.append(thumb);
 
-                // Mostra a primeira imagem selecionada no preview principal
-                if (index === 0) {
-                    $('#imagem-preview').attr('src', e.target.result);
+                        // Atualiza o preview da imagem principal
+                        if (thumbsContainer.find('img').length === 1) {
+                            $('#imagem-preview').attr('src', data.url);
+                        }
+
+                        // Adiciona evento de clique para mudar a imagem principal ao clicar em um thumbnail
+                        thumb.on('click', function () {
+                            $('#imagem-preview').attr('src', data.url);
+                            $('.thumbs img').removeClass('active'); // Remove a classe active de todos
+                            $(this).addClass('active'); // Adiciona a classe active no thumbnail clicado
+                        });
+
+                        toastr.success('Imagem enviada com sucesso!', 'Sucesso');
+                    } else {
+                        toastr.error('Erro: ' + data.message, 'Erro');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    toastr.error('Erro ao enviar a imagem!', 'Erro');
+                    console.error(textStatus, errorThrown);
                 }
+            });
+        }
 
-                // Adiciona evento de clique para mudar a imagem principal ao clicar em um thumbnail
-                thumb.on('click', function () {
-                    $('#imagem-preview').attr('src', e.target.result);
-                    $('.thumbs img').removeClass('active'); // Remove a classe active de todos
-                    $(this).addClass('active'); // Adiciona a classe active no thumbnail clicado
-                });
-            }
-
-            reader.readAsDataURL(file); // Lê o arquivo como uma URL de dados
+        // Loop através dos arquivos selecionados e envie cada um para o servidor
+        $.each(files, function (index, file) {
+            // Envie o arquivo para o servidor
+            uploadFile(file);
         });
     });
+
+
     $('.thumbs img').click(function (e) {
         var cover = $('.light-zoom');
         var thumb = $(this).attr('src');
@@ -61,12 +87,10 @@ $(() => {
         return params;
     }
 
-
-    var produto = (obterParametrosURL());
+    var produto = obterParametrosURL();
     if (produto.categoria != 'NOVO') {
-        // $.getJSON("./src/banco-de-dados.json", function (data) {
         $.getJSON("https://bysun-740ca-default-rtdb.firebaseio.com/data.json", function (data) {
-            database = data;
+            var database = data;
             $.each(database, function (categoria) {
                 if (categoria === produto.categoria) {
                     if (database.hasOwnProperty(categoria)) {
@@ -101,7 +125,9 @@ $(() => {
         // Capturar as imagens
         var imagens = [];
         $('#thumbs-container img').each(function () {
-            imagens.push($(this).attr('src').replace('./img/imagens-oculos/', ''));
+            var srcArray = $(this).attr('src').split('/');
+            var fileName = srcArray[srcArray.length - 1];
+            imagens.push(fileName);
         });
 
         // Criar objeto no formato desejado
@@ -135,10 +161,10 @@ $(() => {
         //         console.log('Produto atualizado com sucesso:', response);
         //     }
         // });
-    })
+    });
 
     function popularInputs(produtoFind) {
-        var especificacoes = Object.keys(produtoFind.especificaProduto)
+        var especificacoes = Object.keys(produtoFind.especificaProduto);
 
         $('#nome').val(produtoFind.descricao);
         $('#preco-antigo').val(produtoFind.precoAntigo);
@@ -168,4 +194,4 @@ $(() => {
             $('#imagem-preview').attr('src', $(this).attr('src'));
         });
     }
-})
+});

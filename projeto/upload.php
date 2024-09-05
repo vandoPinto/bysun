@@ -39,16 +39,14 @@ if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpe
 // Verifique se $uploadOk está definido como 0 devido a um erro
 if ($uploadOk == 0) {
     $mensagem .= "Desculpe, seu arquivo não foi enviado.<br>";
-// Se tudo estiver ok, tente enviar o arquivo
+    echo json_encode(['status' => 'error', 'message' => $mensagem]);
 } else {
     if (move_uploaded_file($_FILES["imagem"]["tmp_name"], $target_file)) {
-        $mensagem .= "O arquivo ". htmlspecialchars(basename($_FILES["imagem"]["name"])). " foi enviado com sucesso.<br>";
+        $fileUrl = '/img/imagens-oculos/' . htmlspecialchars(basename($_FILES["imagem"]["name"]));
+        echo json_encode(['status' => 'success', 'url' => $fileUrl, 'message' => $mensagem]);
     } else {
         $mensagem .= "Desculpe, ocorreu um erro ao enviar seu arquivo.<br>";
+        echo json_encode(['status' => 'error', 'message' => $mensagem]);
     }
 }
-
-// Redireciona de volta para o formulário com a mensagem
-header("Location: editar.php?mensagem=" . urlencode($mensagem) . "&uploadOk=" . $uploadOk);
-exit;
 ?>
