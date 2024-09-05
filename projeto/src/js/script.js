@@ -162,7 +162,15 @@ $(document).ready(function () {
         }
     }
 
-    $.getJSON("https://bysun-740ca-default-rtdb.firebaseio.com/data.json", function (data) {
+    var jsonPath;
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        jsonPath = 'src/banco/banco-de-dados.json'; // Caminho para o ambiente local
+    } else {
+        jsonPath = 'https://bysunoculos.com.br/src/banco/banco-de-dados.json'; // Caminho para o ambiente publicado
+    }
+
+    // $.getJSON("https://bysun-740ca-default-rtdb.firebaseio.com/data.json", function (data) {
+    $.getJSON(jsonPath, function (data) {
         database = data;
         $.each(database, function (categoria) {
             // var categoriaItem = $("<li>").text(categoria).addClass('lista-categorias');
@@ -201,7 +209,7 @@ $(document).ready(function () {
             $.each(database, function (categoria, produtos) {
                 $.each(produtos, function (index, produto) {
                     if (produto.descricao.toLowerCase().includes(query.toLowerCase())) {
-                        adicionarItem(produto);
+                        adicionarItem(produto, categoria);
                         encontrouCorrespondencia = true;
                     }
                 });

@@ -16,12 +16,16 @@ if(isset($_FILES["imagem"])) {
         $mensagem .= "Arquivo não é uma imagem.<br>";
         $uploadOk = 0;
     }
+} else {
+    $mensagem .= "Nenhum arquivo enviado.<br>";
+    $uploadOk = 0;
 }
 
 // Verifique se o arquivo já existe
 if (file_exists($target_file)) {
-    $mensagem .= "Desculpe, o arquivo já existe.<br>";
-    $uploadOk = 0;
+    $fileUrl = '/img/imagens-oculos/' . htmlspecialchars(basename($_FILES["imagem"]["name"]));
+    echo json_encode(['status' => 'success', 'url' => $fileUrl, 'message' => 'Imagem já existe']);
+    exit;
 }
 
 // Limite o tamanho do arquivo
@@ -38,15 +42,13 @@ if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpe
 
 // Verifique se $uploadOk está definido como 0 devido a um erro
 if ($uploadOk == 0) {
-    $mensagem .= "Desculpe, seu arquivo não foi enviado.<br>";
     echo json_encode(['status' => 'error', 'message' => $mensagem]);
 } else {
     if (move_uploaded_file($_FILES["imagem"]["tmp_name"], $target_file)) {
         $fileUrl = '/img/imagens-oculos/' . htmlspecialchars(basename($_FILES["imagem"]["name"]));
-        echo json_encode(['status' => 'success', 'url' => $fileUrl, 'message' => $mensagem]);
+        echo json_encode(['status' => 'success', 'url' => $fileUrl, 'message' => 'Upload realizado com sucesso']);
     } else {
-        $mensagem .= "Desculpe, ocorreu um erro ao enviar seu arquivo.<br>";
-        echo json_encode(['status' => 'error', 'message' => $mensagem]);
+        echo json_encode(['status' => 'error', 'message' => 'Desculpe, ocorreu um erro ao enviar seu arquivo.']);
     }
 }
 ?>

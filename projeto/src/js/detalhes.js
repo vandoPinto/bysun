@@ -132,9 +132,15 @@ function obterParametrosURL() {
 }
 
 
+var jsonPath;
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    jsonPath = 'src/banco/banco-de-dados.json'; // Caminho para o ambiente local
+} else {
+    jsonPath = 'https://bysunoculos.com.br/src/banco/banco-de-dados.json'; // Caminho para o ambiente publicado
+}
 
-// $.getJSON("./src/banco-de-dados.json", function (data) {
-$.getJSON("https://bysun-740ca-default-rtdb.firebaseio.com/data.json", function (data) {
+// $.getJSON("https://bysun-740ca-default-rtdb.firebaseio.com/data.json", function (data) {
+$.getJSON(jsonPath, function (data) {
     var produto = (obterParametrosURL());
     database = data;
     $.each(database, function (categoria) {
