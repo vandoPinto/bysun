@@ -8,7 +8,7 @@ function detalhesItem(produto) {
     var thumbs = $("<div>").addClass("thumbs");
 
 
-    var imgProduto = $("<img>").attr("src", './img/imagens-oculos/' + produto.imgs[0]).attr("alt", "").css("max-height", "450px").css('width', 'auto').addClass('light-zoom');
+    var imgProduto = $("<img>").attr("src", './imagens-oculos/' + produto.imgs[0]).attr("alt", "").css("max-height", "450px").css('width', 'auto').addClass('light-zoom');
     var textoContainer = $("<div>").addClass("texto-container style2");
     var tituloProduto = $("<h1>").addClass("style3").text(produto.descricao);
     var linkConhecer = $("<a>").addClass("style4").attr("href", "#mais").text("conheça mais sobre este produto");
@@ -19,9 +19,18 @@ function detalhesItem(produto) {
     var frete = $("<p>").addClass("style7").text("Frete a calcular de acordo com a região.");
     var desconto = $("<p>").addClass("style7").text("Desconto 5% no pix.");
 
-    var urlImagemSelecionada = new URL('./img/imagens-oculos/' + produto.imgs[0], window.location.origin).href
-    var linkComprar = $("<a>").addClass("style8").attr("href",
-        `https://api.whatsapp.com/send?phone=556198366-5716&text=Olá gostaria de mais informações sobre o óculos: ${produto.descricao}, com o código: ${produto.id}, ${urlImagemSelecionada} `).attr('target', '_blank').text("COMPRAR");
+    var urlImagemSelecionada = new URL('./imagens-oculos/' + produto.imgs[0], window.location.origin).href
+
+
+    var mensagem = `Gostaria de mais sobre o óculos: ${produto.descricao}, ${window.location.href}`;
+    var linkWhatsApp = `https://api.whatsapp.com/send?phone=5561983665716&text=${encodeURIComponent(mensagem)}`;
+
+    var linkComprar = $("<a>")
+        .addClass("style8")
+        .attr("href", linkWhatsApp)
+        .attr('target', '_blank')
+        .text("COMPRAR");
+
 
     // Construindo a estrutura HTML
     imagemContainer.append(imgProduto);
@@ -30,10 +39,10 @@ function detalhesItem(produto) {
     produto.imgs.map((src, index) => {
         var imagem;
         if (index == 0) {
-            imagem = $("<img>").attr("src", './img/imagens-oculos/' + src).addClass('active');
+            imagem = $("<img>").attr("src", './imagens-oculos/' + src).addClass('active');
         } else {
 
-            imagem = $("<img>").attr("src", './img/imagens-oculos/' + src);
+            imagem = $("<img>").attr("src", './imagens-oculos/' + src);
         }
         thumbs.append(imagem)
     });
@@ -81,8 +90,6 @@ function detalhesItem(produto) {
 
     var especificacoesLabels = ["Material da Lente", "Gênero", "Proteção da Lente", "Itens Inclusos", "Cor da Lente"];
     Object.keys(produto.especificaProduto).forEach(function (chave, index) {
-        console.log(chave);
-
         especificacoesTipo.append($("<p>").text(especificacoesLabels[index]));
         especificacoesInfo.append($("<p>").text(produto.especificaProduto[chave]));
     });
@@ -135,9 +142,9 @@ function obterParametrosURL() {
 
 var jsonPath;
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    jsonPath = 'src/banco/banco-de-dados.json'; // Caminho para o ambiente local
+    jsonPath = 'banco/banco-de-dados.json'; // Caminho para o ambiente local
 } else {
-    jsonPath = 'https://bysunoculos.com.br/src/banco/banco-de-dados.json'; // Caminho para o ambiente publicado
+    jsonPath = 'https://bysunoculos.com.br/banco/banco-de-dados.json'; // Caminho para o ambiente publicado
 }
 
 // $.getJSON("https://bysun-740ca-default-rtdb.firebaseio.com/data.json", function (data) {

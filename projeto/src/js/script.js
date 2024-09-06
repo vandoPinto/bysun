@@ -48,7 +48,7 @@ $(document).ready(function () {
 
         // var link = $("<div>").click(() => { detalhesItem(produto) })//.attr("href", "./descricao.html").attr("target", "_blank");
         var link = $("<div>").click(() => { chamarDetalhes(produtoSelecionado) })//.attr("href", "./descricao.html").attr("target", "_blank");
-        var imgProduto = $("<img>").addClass("imagem-produto").attr("src", './img/imagens-oculos/' + produto.imgs[0]).attr("alt", "Óculos");
+        var imgProduto = $("<img>").addClass("imagem-produto").attr("src", './imagens-oculos/' + produto.imgs[0]).attr("alt", "Óculos");
         var descricaoProduto = $("<p>").addClass("descricao-produto").text(produto.descricao);
         var divPrecos = $("<div>").addClass("precos");
         var precoAntigo = $("<p>").addClass("preco-antigo").text("R$ " + produto.precoAntigo);
@@ -164,9 +164,9 @@ $(document).ready(function () {
 
     var jsonPath;
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        jsonPath = 'src/banco/banco-de-dados.json'; // Caminho para o ambiente local
+        jsonPath = 'banco/banco-de-dados.json'; // Caminho para o ambiente local
     } else {
-        jsonPath = 'https://bysunoculos.com.br/src/banco/banco-de-dados.json'; // Caminho para o ambiente publicado
+        jsonPath = 'https://bysunoculos.com.br/banco/banco-de-dados.json'; // Caminho para o ambiente publicado
     }
 
     // $.getJSON("https://bysun-740ca-default-rtdb.firebaseio.com/data.json", function (data) {

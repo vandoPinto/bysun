@@ -3,7 +3,7 @@ $mensagem = ""; // Inicialize a variável de mensagem
 $uploadOk = 1;  // Inicialize o status do upload
 
 // Defina o diretório onde as imagens serão salvas
-$target_dir = "/home/u367086902/domains/bysunoculos.com.br/public_html/img/imagens-oculos/";
+$target_dir = "/home/u367086902/domains/bysunoculos.com.br/public_html/imagens-oculos/";
 $target_file = $target_dir . basename($_FILES["imagem"]["name"]);
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -23,7 +23,7 @@ if(isset($_FILES["imagem"])) {
 
 // Verifique se o arquivo já existe
 if (file_exists($target_file)) {
-    $fileUrl = '/img/imagens-oculos/' . htmlspecialchars(basename($_FILES["imagem"]["name"]));
+    $fileUrl = '/imagens-oculos/' . htmlspecialchars(basename($_FILES["imagem"]["name"]));
     echo json_encode(['status' => 'success', 'url' => $fileUrl, 'message' => 'Imagem já existe']);
     exit;
 }
@@ -45,7 +45,7 @@ if ($uploadOk == 0) {
     echo json_encode(['status' => 'error', 'message' => $mensagem]);
 } else {
     if (move_uploaded_file($_FILES["imagem"]["tmp_name"], $target_file)) {
-        $fileUrl = '/img/imagens-oculos/' . htmlspecialchars(basename($_FILES["imagem"]["name"]));
+        $fileUrl = '/imagens-oculos/' . htmlspecialchars(basename($_FILES["imagem"]["name"]));
         echo json_encode(['status' => 'success', 'url' => $fileUrl, 'message' => 'Upload realizado com sucesso']);
     } else {
         echo json_encode(['status' => 'error', 'message' => 'Desculpe, ocorreu um erro ao enviar seu arquivo.']);

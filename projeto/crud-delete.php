@@ -2,10 +2,10 @@
 // Define o caminho do arquivo JSON com base no ambiente
 if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false) {
     // Ambiente local
-    $jsonFile = __DIR__ . '/src/banco/banco-de-dados.json'; // Caminho relativo para o ambiente local
+    $jsonFile = __DIR__ . '/banco/banco-de-dados.json'; // Caminho relativo para o ambiente local
 } else {
     // Ambiente de produção
-    $jsonFile = '/home/u367086902/domains/bysunoculos.com.br/public_html/src/banco/banco-de-dados.json'; // Caminho absoluto para o ambiente de produção
+    $jsonFile = '/home/u367086902/domains/bysunoculos.com.br/public_html/banco/banco-de-dados.json'; // Caminho absoluto para o ambiente de produção
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

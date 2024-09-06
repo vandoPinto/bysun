@@ -134,9 +134,9 @@ $(() => {
         // Edição de produto existente, busca os dados e preenche o formulário
         var jsonPath;
         if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-            jsonPath = 'src/banco/banco-de-dados.json'; // Caminho para o ambiente local
+            jsonPath = 'banco/banco-de-dados.json'; // Caminho para o ambiente local
         } else {
-            jsonPath = 'https://bysunoculos.com.br/src/banco/banco-de-dados.json'; // Caminho para o ambiente publicado
+            jsonPath = 'https://bysunoculos.com.br/banco/banco-de-dados.json'; // Caminho para o ambiente publicado
         }
 
         $.getJSON(jsonPath, function (data) {
@@ -164,15 +164,7 @@ $(() => {
         // $('#nome').val('Nome do Produto');
         $('#preco-antigo').val('200,00');
         $('#preco').val('150,00');
-        $('#descricao').val(
-            `Estilo: Oval
-Óculos de sol com design elegante e vintage.
-Perfeito para adicionar um toque de sofisticação ao seu look.
-Proteção UV: 100% UVA / UVB
-Cor da armação: Marrom claro
-Cor da lente: Marrom degradê
-Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza.`);
-
+        $('#descricao').val(`Estilo: Oval / Óculos de sol com design elegante e vintage. / Perfeito para adicionar um toque de sofisticação ao seu look. / Proteção UV: 100% UVA / UVB / Cor da armação: Marrom claro / Cor da lente: Marrom degradê / Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza.`);
         $('#material').val('Acetato premium ou metal');
         $('#genero').val('Feminino'); // ou outro valor padrão
         $('#protecao').val('Contra Raios UVA / UVB');
@@ -270,19 +262,19 @@ Inclui: 1 Óculos Solar, 1 Case e 1 Flanela para Limpeza.`);
         thumbsContainer.empty(); // Limpa o contêiner de thumbnails
         produtoFind.imgs.forEach(function (imagem, index) {
             var thumb = $('<img>', {
-                src: '../../img/imagens-oculos/' + imagem,
+                src: '../../imagens-oculos/' + imagem,
                 class: 'thumb'
             });
             thumbsContainer.append(thumb);
 
             // Define a primeira imagem como imagem principal no preview
             if (index === 0) {
-                $('#imagem-preview').attr('src', '../../img/imagens-oculos/' + imagem);
+                $('#imagem-preview').attr('src', '../../imagens-oculos/' + imagem);
             }
 
             // Adiciona evento de clique para mudar a imagem principal ao clicar em um thumbnail
             thumb.on('click', function () {
-                $('#imagem-preview').attr('src', '../../img/imagens-oculos/' + imagem);
+                $('#imagem-preview').attr('src', '../../imagens-oculos/' + imagem);
                 $('#thumbs-container img').removeClass('active'); // Remove a classe active de todos
                 $(this).addClass('active'); // Adiciona a classe active no thumbnail clicado
             });
