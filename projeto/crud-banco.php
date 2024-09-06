@@ -15,6 +15,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
+    // Cria um backup do arquivo JSON antes de sobrescrever
+    $backupDir = dirname($jsonFile) . '/backup/' . date('Y-m-d'); // Pasta com a data de hoje
+    if (!is_dir($backupDir)) {
+        mkdir($backupDir, 0755, true); // Cria a pasta, caso não exista
+    }
+
+    $backupFile = $backupDir . '/banco-de-dados-' . time() . '.json'; // Arquivo com timestamp
+
+    if (!copy($jsonFile, $backupFile)) {
+        echo json_encode(['status' => 'error', 'message' => 'Falha ao criar backup do arquivo JSON']);
+        exit;
+    }
+
+    // Lê o conteúdo atual do arquivo JSON
     $data = json_decode(file_get_contents($jsonFile), true);
     $produtoAtualizado = json_decode(file_get_contents('php://input'), true);
     $categoria = $produtoAtualizado['categoria'];

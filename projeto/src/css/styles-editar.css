@@ -142,13 +142,15 @@
 }
 
 #imagem-preview {
-    max-height: 450px;
+    max-height: 350px;
     width: auto;
 }
 
 .thumbs {
     display: flex;
     gap: 10px;
+    overflow-x: auto;
+    justify-content: space-evenly;
 }
 
 .thumbs img {
