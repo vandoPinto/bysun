@@ -3,9 +3,11 @@
 if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false) {
     // Ambiente local
     $jsonFile = __DIR__ . '/banco/banco-de-dados.json'; // Caminho relativo para o ambiente local
+    $imageDir = __DIR__ . '/imagens-oculos/'; // Diretório local das imagens
 } else {
     // Ambiente de produção
     $jsonFile = '/home/u367086902/domains/bysunoculos.com.br/public_html/banco/banco-de-dados.json'; // Caminho absoluto para o ambiente de produção
+    $imageDir = '/home/u367086902/domains/bysunoculos.com.br/public_html/imagens-oculos/'; // Diretório de produção das imagens
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -31,6 +33,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($data[$categoria] as $index => $produto) {
         if ($produto['id'] == $id) {
             // Remove o produto do array
+            $imagens = $produto['imgs']; // Captura as imagens do produto
+
+            // Excluir as imagens associadas ao produto
+            foreach ($imagens as $imagem) {
+                $imagePath = $imageDir . $imagem;
+                if (file_exists($imagePath)) {
+                    unlink($imagePath); // Remove a imagem do servidor
+                }
+            }
+
             unset($data[$categoria][$index]);
             $data[$categoria] = array_values($data[$categoria]); // Reindexar o array
             $produtoEncontrado = true;
